@@ -5,38 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-android:id="@+id/etNome"
-    android:hint="Digite o seu nome aqui!"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/et"
-        android:hint=""
-        app:layout_constraintTop_toBottomOf="@+id/"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/etNome"
-        android:hint="Digite seu nome aqui!"
-        app:layout_constraintTop_toBottomOf="@+id/" parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <Button
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:id="@+id/btMensagem"
-        android:text="Mensagem"
-        app:layout_constraintTop_toBottomOf="@+id/"
-        app:layout_constraintStart_toStartOf="parent"/>
+
     <TextView
+        android:id="@+id/tvDescricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvMensagem"
-        app:layout_constraintTop_toBottomOf="@id/btMensagem"
-        app:layout_constraintStart_toStartOf="parent"/>
+                android:text="Esse é o nosso aplicativo de cadástro de livros, aqui vamos cadastrar as informações dos livros do acervo da biblioteca."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o nome do livro:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <EditText
+        android:id="@+id/etAutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o nome do autor:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNome" />
+
+    <EditText
+        android:id="@+id/etQuantidadedepaginas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a quantidade de paginas:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAutor" />
+
+    <Button
+        android:id="@+id/btDisponivel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Disponível"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etQuantidadedepaginas" />
+
+    <Button
+        android:id="@+id/btRetirado"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Retirado"
+        app:layout_constraintStart_toEndOf="@id/btDisponivel"
+        app:layout_constraintTop_toBottomOf="@id/btDisponivel" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
